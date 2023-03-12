@@ -2,7 +2,7 @@
 
 namespace Untek\Model\Service\Traits;
 
-use Untek\Core\Code\Helpers\PropertyHelper;
+use Untek\Core\Instance\Helpers\PropertyHelper;
 use Untek\Model\Shared\Enums\EventEnum;
 
 trait CrudServiceUpdateTrait
