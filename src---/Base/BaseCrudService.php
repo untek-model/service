@@ -2,6 +2,7 @@
 
 namespace Untek\Model\Service\Base;
 
+use Untek\Core\Code\Helpers\DeprecateHelper;
 use Untek\Model\Shared\Enums\EventEnum;
 use Untek\Model\Shared\Events\QueryEvent;
 use Untek\Model\Shared\Traits\DispatchEventTrait;
@@ -20,20 +21,22 @@ use Untek\Model\Service\Traits\CrudServiceFindOneTrait;
 use Untek\Model\Service\Traits\CrudServiceUpdateTrait;
 use Untek\Model\Validator\Helpers\ValidationHelper;
 
+DeprecateHelper::hardThrow();
+
 /**
  * @method CrudRepositoryInterface getRepository()
  */
-abstract class BaseCrudService extends BaseService implements CrudServiceInterface//, ForgeQueryByFilterInterface
+abstract class BaseCrudService extends BaseService //implements CrudServiceInterface//, ForgeQueryByFilterInterface
 {
 
 //    use DispatchEventTrait;
-    use ForgeQueryTrait;
+//    use ForgeQueryTrait;
 
-    use CrudServiceCreateTrait;
-    use CrudServiceDeleteTrait;
-    use CrudServiceFindAllTrait;
-    use CrudServiceFindOneTrait;
-    use CrudServiceUpdateTrait;
+//    use CrudServiceCreateTrait;
+//    use CrudServiceDeleteTrait;
+//    use CrudServiceFindAllTrait;
+//    use CrudServiceFindOneTrait;
+//    use CrudServiceUpdateTrait;
 
     public function forgeQueryByFilter(object $filterModel, Query $query)
     {

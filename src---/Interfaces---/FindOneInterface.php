@@ -2,9 +2,12 @@
 
 namespace Untek\Model\Service\Interfaces;
 
+use Untek\Core\Code\Helpers\DeprecateHelper;
 use Untek\Core\Contract\Common\Exceptions\NotFoundException;
 use Untek\Model\Entity\Interfaces\EntityIdInterface;
 use Untek\Model\Query\Entities\Query;
+
+DeprecateHelper::hardThrow();
 
 interface FindOneInterface
 {

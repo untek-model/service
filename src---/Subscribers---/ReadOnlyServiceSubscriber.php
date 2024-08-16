@@ -3,11 +3,14 @@
 namespace Untek\Model\Service\Subscribers;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Untek\Core\Code\Helpers\DeprecateHelper;
 use Untek\Core\Contract\Common\Exceptions\ReadOnlyException;
 use Untek\Model\Shared\Enums\EventEnum;
 use Untek\Model\Shared\Events\EntityEvent;
 use Untek\Model\EntityManager\Interfaces\EntityManagerInterface;
 use Untek\Model\EntityManager\Traits\EntityManagerAwareTrait;
+
+DeprecateHelper::hardThrow();
 
 class ReadOnlyServiceSubscriber implements EventSubscriberInterface
 {
