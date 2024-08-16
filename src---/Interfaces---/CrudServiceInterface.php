@@ -8,7 +8,7 @@ use Untek\Model\Shared\Interfaces\ReadAllInterface;
 
 DeprecateHelper::hardThrow();
 
-interface CrudServiceInterface extends ServiceDataProviderInterface, ServiceInterface, GetEntityClassInterface, ReadAllInterface, FindOneInterface, ModifyInterface
+interface CrudServiceInterface //extends ServiceDataProviderInterface, ServiceInterface, GetEntityClassInterface, ReadAllInterface, FindOneInterface, ModifyInterface
 {
 
 
