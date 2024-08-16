@@ -23,10 +23,10 @@ use Untek\Model\Validator\Helpers\ValidationHelper;
 /**
  * @method CrudRepositoryInterface getRepository()
  */
-abstract class BaseCrudService extends BaseService implements CrudServiceInterface, ForgeQueryByFilterInterface
+abstract class BaseCrudService extends BaseService implements CrudServiceInterface//, ForgeQueryByFilterInterface
 {
 
-    use DispatchEventTrait;
+//    use DispatchEventTrait;
     use ForgeQueryTrait;
 
     use CrudServiceCreateTrait;
@@ -38,10 +38,10 @@ abstract class BaseCrudService extends BaseService implements CrudServiceInterfa
     public function forgeQueryByFilter(object $filterModel, Query $query)
     {
         $repository = $this->getRepository();
-        ClassHelper::checkInstanceOf($repository, ForgeQueryByFilterInterface::class);
-        $event = new QueryEvent($query);
-        $event->setFilterModel($filterModel);
-        $this->getEventDispatcher()->dispatch($event, EventEnum::BEFORE_FORGE_QUERY_BY_FILTER);
+//        ClassHelper::checkInstanceOf($repository, ForgeQueryByFilterInterface::class);
+//        $event = new QueryEvent($query);
+//        $event->setFilterModel($filterModel);
+//        $this->getEventDispatcher()->dispatch($event, EventEnum::BEFORE_FORGE_QUERY_BY_FILTER);
         $repository->forgeQueryByFilter($filterModel, $query);
     }
 

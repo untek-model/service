@@ -11,7 +11,7 @@ use Untek\Model\Service\Interfaces\CreateEntityInterface;
 abstract class BaseService implements GetEntityClassInterface, CreateEntityInterface
 {
 
-    use EventDispatcherTrait;
+//    use EventDispatcherTrait;
     use EntityManagerAwareTrait;
     use RepositoryAwareTrait;
 
